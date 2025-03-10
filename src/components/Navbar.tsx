@@ -1,14 +1,15 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import { useAuth } from '../contexts/AuthContext';
+import { auth } from '../config/firebase';
+import { useAuthState } from 'react-firebase-hooks/auth';
 
 const Navbar = () => {
   const router = useRouter();
-  const { user, logout } = useAuth();
+  const [user] = useAuthState(auth);
 
   const handleLogout = async () => {
     try {
-      await logout();
+      await auth.signOut();
       router.push('/login');
     } catch (error) {
       console.error('Failed to log out:', error);
