@@ -20,46 +20,41 @@ Before you begin, ensure you have the following installed:
 - A Stripe account
 - A Google Maps API key
 
-## Installation
+## Getting Started
 
-1. Clone the repository:
+1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/surgivisor.git
-cd surgivisor
+git clone https://github.com/AINASH-XALON/surgvisor.git
+cd surgvisor
 ```
 
-2. Install dependencies:
+2. Install dependencies
 ```bash
 npm install
-# or
-yarn install
 ```
 
-3. Create a `.env.local` file in the root directory and add your environment variables:
-```env
-# Firebase Configuration
-NEXT_PUBLIC_FIREBASE_API_KEY=your-api-key
-NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your-auth-domain
-NEXT_PUBLIC_FIREBASE_PROJECT_ID=your-project-id
-NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your-storage-bucket
-NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your-messaging-sender-id
-NEXT_PUBLIC_FIREBASE_APP_ID=your-app-id
+3. Set up environment variables
+- Copy `.env.example` to `.env.local`
+- Fill in your Firebase configuration values
+- Add any other required API keys
 
-# Stripe Configuration
-NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=your-stripe-publishable-key
-STRIPE_SECRET_KEY=your-stripe-secret-key
-STRIPE_SUBSCRIPTION_PRICE_ID=your-subscription-price-id
-
-# Google Maps API
-NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your-google-maps-api-key
-```
-
-4. Start the development server:
+4. Run the development server
 ```bash
 npm run dev
-# or
-yarn dev
 ```
+
+## Deployment
+
+1. Create a project on [Vercel](https://vercel.com)
+2. Connect your GitHub repository
+3. Add the following environment variables in your Vercel project settings:
+   - `NEXT_PUBLIC_FIREBASE_API_KEY`
+   - `NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN`
+   - `NEXT_PUBLIC_FIREBASE_PROJECT_ID`
+   - `NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET`
+   - `NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID`
+   - `NEXT_PUBLIC_FIREBASE_APP_ID`
+4. Deploy!
 
 ## Project Structure
 
